@@ -1,0 +1,100 @@
+/*自定义全局样式*/
+.navbar-myDefault {
+    background-color: #fff; 
+    border-color: #fff; 
+}
+.navbar-myDefault .navbar-toggle:hover, .navbar-myDefault .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-myDefault .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-myDefault .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+footer{padding: 16px 0; }
+
+
+/*/自定义全局样式*/
+
+
+
+/*覆盖bootstrap样式*/
+a{color: #999}
+.nav>li>a:hover, .nav>li>a:focus {
+    background-color: #fff;
+}
+.dropdown-menu>li>a{color: #999; }
+small { font-size: 60%;}
+.navbar-default{background-color: #fff; }
+/*/覆盖bootstrap样式*/
+
+
+
+/*------index------*/
+.content{text-align: center; padding-top: 45px; }
+.big-title h1{font-size: 60px; }
+.big-title p{line-height: 1.6em; font-size: 20px; }
+.big-title{padding-left: 150px; padding-right: 150px; }
+.clr-red{color: #ff6633 ;}
+.clr-orange{color: #ffcc00 ;}
+.clr-green{color: #66cc00 ;}
+.clr-blue{color: #0066ff ;}
+.clr-gay{color: #999; }
+
+/*------/index------*/
+
+
+
+
+/*----------------------------------------------自适应模块-----------------------------------------------*/
+
+/*手机*/
+@media (max-width: 767px){
+  .nav>li {
+      border-bottom: 1px solid #888;
+  }
+  footer .nav>li{border: 0; }
+  footer .navbar-nav {
+      float: left;
+      margin: 0;
+  }
+
+  footer .navbar-right {
+      float: right!important;
+  }
+  .navbar-brand img{height: 20px; }
+  .smalltitle{display: inline; }
+  .big-title h1{font-size: 30px; }
+  .big-title p{line-height: 1.6em; font-size: 20px; }
+  .big-title{padding-left: 0px; padding-right: 0px; }
+
+  .nav>li.active{background-color: #f9f9f9;}
+
+
+}
+
+/*平板竖屏*/
+@media (min-width: 768px){
+  .smalltitle{display: none; }
+  .navbar-nav>li>a {
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+
+}
+
+/*桌面显示器*/
+@media (min-width: 992px){
+  .navbar-nav>li>a {
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+  footer .container{padding-right: 160px; padding-left: 160px; }
+}
+
+
+/*大桌面显示器*/
+@media (min-width: 992px){
+
+}
