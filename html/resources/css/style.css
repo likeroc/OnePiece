@@ -12,7 +12,7 @@
 .navbar-myDefault .navbar-toggle .icon-bar {
     background-color: #888;
 }
-footer{padding: 16px 0; }
+
 
 
 /*/自定义全局样式*/
@@ -45,6 +45,28 @@ small { font-size: 60%;}
 /*------/index------*/
 
 
+/*------footer------*/
+.nav-footer{
+  border-bottom-width: 0px;
+  margin-bottom: 0px;
+}
+footer{padding: 16px 0; color: #777; }
+.navbar-nav>li>a.copyright{display: inline; padding: 0; color: #009DDC; }
+
+
+/*------/footer------*/
+
+
+/*------detail------*/
+
+
+
+
+
+
+
+
+/*------/detail------*/
 
 
 /*----------------------------------------------自适应模块-----------------------------------------------*/
