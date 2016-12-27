@@ -68,6 +68,26 @@ footer{padding: 16px 0; color: #777; }
 
 /*------/detail------*/
 
+/*------qa------*/
+.answerTime{font-size: .938em; color: #7d7d84; }
+.media-border{border: 1px solid #e3e3e3; padding: 6px 8px; }
+.glyphicon-thumbs-up{margin-right: 5px; }
+.glyphicon-thumbs-down{margin-right: 5px; }
+.writeAnswer{margin-top: 20px; }
+/*.writeText{display: none;}*/
+.writeText .btn.pull-right{margin-top: 20px; }
+.writeAnswer .input-sm{color: #999; } 
+a .glyphicon{color: #2a6496; }
+.badge{background-color: #428bca; margin-left: 15px; }
+
+
+
+
+
+/*------/qa------*/
+
+
+
 
 /*----------------------------------------------自适应模块-----------------------------------------------*/
 
