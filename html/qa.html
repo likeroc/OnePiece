@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Question & Answers</title>
 
-    
+    <!-- simditor style -->
+    <link rel="stylesheet" type="text/css" href="resources/simditor236/styles/simditor.css" />
     <!-- Salesforce lightning design system -->
     <link href="resources/lds214/assets/styles/salesforce-lightning-design-system.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -130,11 +131,11 @@
                   </div>
 
                   <div class="writeAnswer ">
-                    <input class="form-control input-sm writeAction" type="text" name="" value="Write an answer or comment..." click="writeAction()">
+                    <input class="form-control input-sm writeAction" type="text" name="" value="Write an answer or comment..." >
                     <br>
                     <div class="writeText">
-                      <textarea class="form-control" style="display: block; width: 100%; "></textarea>
-                      <bottom class="btn btn-default pull-right">Answer</bottom>
+                      <textarea id="editor" placeholder="Write an answer or comment..." autofocus></textarea>
+                      <bottom class="btn btn-answer btn-default pull-right">Answer</bottom>
                     </div>
                   </div>
                   
@@ -204,13 +205,56 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="resources/bootstrap330/js/bootstrap.min.js"></script>
     <script src="resources/js/bts.min.js"></script>
+    <!-- simditor -->
+    <script type="text/javascript" src="resources/simditor236/scripts/module.js"></script>
+    <script type="text/javascript" src="resources/simditor236/scripts/hotkeys.js"></script>
+    <script type="text/javascript" src="resources/simditor236/scripts/uploader.js"></script>
+    <script type="text/javascript" src="resources/simditor236/scripts/simditor.js"></script>
     <script type="text/javascript">
-    window.onload=function () {
-      function writeAction() {
-        
-      }
-      
-    }
+      $(function(){
+
+        //  simditor编辑器
+        var editor = new Simditor({
+          //optional options
+          textarea: $('#editor'),
+          toolbar : [
+            'bold',
+            'italic',
+            'underline',
+            // 'strikethrough',
+            // 'fontScale',
+            'color',
+            'ol',             
+            'ul' ,            
+            // 'blockquote',
+            'code' ,          
+            'table',
+            'link',
+            'image',
+            'hr'    ,         
+            'indent',
+            'outdent',
+            'alignment'
+          ]
+
+        });
+
+        $('.writeAction').click(function () {
+          $('.writeAction').hide();
+          $('.writeText').show();
+        })
+
+        $('.btn-answer').click(function () {
+          alert(editor.sync() );
+          $('.writeAction').show();
+          $('.writeText').hide();
+          editor.Destroy();
+        });
+
+        // /simditor编辑器
+
+
+      }); 
       
     </script>
     

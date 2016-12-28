@@ -74,7 +74,7 @@ footer{padding: 16px 0; color: #777; }
 .glyphicon-thumbs-up{margin-right: 5px; }
 .glyphicon-thumbs-down{margin-right: 5px; }
 .writeAnswer{margin-top: 20px; }
-/*.writeText{display: none;}*/
+.writeText{display: none;}
 .writeText .btn.pull-right{margin-top: 20px; }
 .writeAnswer .input-sm{color: #999; } 
 a .glyphicon{color: #2a6496; }
