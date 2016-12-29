@@ -87,6 +87,24 @@ a .glyphicon{color: #2a6496; }
 /*------/qa------*/
 
 
+/*------/results------*/
+.clr-error{color: #a94442; }
+.clr-warning{color: #8a6d3b;}
+.clr-success{color: #3c763d; }
+.clr-info{color: #5bc0de; }
+
+.exam-result{text-align: center; }
+.table.table-thin>thead>tr>td,.table.table-thin>tbody>tr>td{padding: 2px;}
+.table.table-thin>thead>tr>td:nth-last-child(1),.table.table-thin>tbody>tr>td:nth-last-child(1),
+.table.table-thin>thead>tr>td:nth-last-child(2),.table.table-thin>tbody>tr>td:nth-last-child(2)
+{width: 10%; text-align: center; }
+.table-thin th{font-size: 9px; }
+/*------/results------*/
+
+
+
+
+
 
 
 /*----------------------------------------------自适应模块-----------------------------------------------*/
