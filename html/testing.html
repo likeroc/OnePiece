@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Exam</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="resources/swiper/css/swiper.min.css">
+    <!-- simditor style -->
+    <link rel="stylesheet" type="text/css" href="resources/simditor236/styles/simditor.css" />
+    <!-- Salesforce lightning design system -->
+    <link href="resources/lds214/assets/styles/salesforce-lightning-design-system.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="resources/bootstrap330/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom style -->
+    <link href="resources/css/bts.css" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet">
+    
+
+    <!-- Demo styles -->
+    <style>
+    html, body{
+        position: relative;
+        height: 100%;
+        background: #eee; 
+    }
+    main{text-align: center; position: relative; }
+    /*手机*/
+    @media (max-width: 767px){
+        main{height: 78%;}
+        .swiper-container-horizontal>.swiper-pagination{height: 13%;}
+        .swiper-wrapper{height: 85%; top: 15%; }
+        .exam-content{width: 100%; }
+    }
+    /*平板竖屏*/
+    @media (min-width: 768px){
+        main{height: 83%;}
+        .swiper-container-horizontal>.swiper-pagination{height: 15%;}
+        .swiper-wrapper{height: 85%; top: 15%; }
+    }
+    /*桌面显示器*/
+    @media (min-width: 992px){
+        main{height: 76%;}
+        .swiper-container-horizontal>.swiper-pagination{height: 15%;}
+        .swiper-wrapper{height: 85%; top: 15%; }
+    }
+    </style>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-myDefault" role="navigation">
+        <div class="container myContainer">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <!-- <img alt="Brand" src="resources/img/logo.png" style="height: 20px;"> -->
+              S&amp;O <small class="smalltitle">Salesforce&amp;Onepiece</small>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Dev Beginner</a></li>
+              <li><a href="#">Dev Intermediate</a></li>
+              <li class="active"><a href="#">Dev Advanced</a></li>
+              <li><a href="#">Exam Dev I</a></li>
+              <li><a href="#">Exam Dev II</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quiz <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Salesforce Certified Platform Developer I</a></li>
+                  <li><a href="#">Salesforce Certified Platform Developer II</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Q&amp;A</a></li>
+              
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      
+    </header>
+
+
+    <main>
+    <div class="exam-content">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="exam-main">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    </main>
+
+    <nav class="navbar navbar-default nav-footer navbar-fixed-bottom" role="navigation">
+      <footer>
+        <div class="container">
+            <ul class="nav navbar-nav">
+              <li>©<a class="copyright" target="_blank" href="http://www.likeroc.com"> LIKEROC</a> 2015~2016</li>
+              <li></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>苏ICP备15022252号</li>
+            </ul>
+        </div>
+      </footer>
+    </nav>
+    
+        
+    
+
+    <!-- Swiper JS -->
+    <script src="resources/swiper/js/swiper.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="resources/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/bootstrap330/js/bootstrap.min.js"></script>
+    <script src="resources/js/bts.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+    </script>
+</body>
+</html>
