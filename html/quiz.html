@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+
+    
+    <!-- Salesforce lightning design system -->
+    <link href="resources/lds214/assets/styles/salesforce-lightning-design-system.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="resources/bootstrap330/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom style -->
+    <link href="resources/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-myDefault" role="navigation">
+        <div class="container myContainer">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <!-- <img alt="Brand" src="resources/img/logo.png" style="height: 20px;"> -->
+              S&amp;O <small class="smalltitle">Salesforce&amp;Onepiece</small>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Dev Beginner</a></li>
+              <li><a href="#">Dev Intermediate</a></li>
+              <li class="active"><a href="#">Dev Advanced</a></li>
+              <li><a href="#">Exam Dev I</a></li>
+              <li><a href="#">Exam Dev II</a></li>
+              <li><a href="#">Quiz</span></a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Q&amp;A</a></li>
+              
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      
+    </header>
+
+    <main>
+      <div class="container">
+        <h4><b>Your exam :</b></h4>
+        <div class="filter-list row">
+
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-admin">Administrator</span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-adv-admin">Advanced Administrator </span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-dev1">Developer I</span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-dev2">Developer II</span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-salescc">Sales Cloud Consultan</span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-servicecc">Service Cloud Consultan</span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-builder">App Builder</span></div>
+        </div>
+
+        <h3>Showing 28 exams out of 40</h3>
+        <div class="row">
+          
+        </div>
+      </div>
+    </main>
+
+
+    <nav class="navbar navbar-default nav-footer" role="navigation">
+      <footer>
+        <div class="container">
+            <ul class="nav navbar-nav">
+              <li>©<a class="copyright" target="_blank" href="http://www.likeroc.com"> LIKEROC</a> 2015~2016</li>
+              <li></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>苏ICP备15022252号</li>
+            </ul>
+        </div>
+      </footer>
+    </nav>
+    <!-- /不是满屏的footer -->
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="resources/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="resources/bootstrap330/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('.filter-tag').click(function () {
+          var tag = $(this).attr('class');
+
+          if(tag.indexOf('filter-tag-active') > 0){
+            $(this).removeClass('filter-tag-active');
+          }else{
+            $(this).addClass('filter-tag-active');
+          }
+          
+        });
+
+      })
+    </script>
+  </body>
+</html>
