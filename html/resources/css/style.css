@@ -158,7 +158,12 @@ a .glyphicon{color: #2a6496; }
 
 
 /*----------------/my style----------------*/
-
+.exam-main{text-align: left; width: 75%; }
+.swiper-slide{overflow-y: auto; }
+/*手机*/
+@media (max-width: 767px){
+  .exam-main{height: 100%; padding-top: 10%; }
+}
 
 
 
