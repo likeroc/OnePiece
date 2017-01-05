@@ -66,7 +66,7 @@
         <div class="filter-list row">
 
           <div class="col-md-3"><span class="filter-tag" data-filter="exam-admin">Administrator</span></div>
-          <div class="col-md-3"><span class="filter-tag" data-filter="exam-adv-admin">Advanced Administrator </span></div>
+          <div class="col-md-3"><span class="filter-tag" data-filter="exam-adv_admin">Advanced Administrator </span></div>
           <div class="col-md-3"><span class="filter-tag" data-filter="exam-dev1">Developer I</span></div>
           <div class="col-md-3"><span class="filter-tag" data-filter="exam-dev2">Developer II</span></div>
           <div class="col-md-3"><span class="filter-tag" data-filter="exam-salescc">Sales Cloud Consultan</span></div>
@@ -74,9 +74,88 @@
           <div class="col-md-3"><span class="filter-tag" data-filter="exam-builder">App Builder</span></div>
         </div>
 
-        <h3>Showing 28 exams out of 40</h3>
+        <h3 class="tag-unmber">Showing 28 exams out of 40</h3>
         <div class="row">
-          
+          <div class="col-md-4" title="exam-dev1">
+            <div class="filter-tag-main filter-tag-dev1">
+              <div class="tag-upper">
+                <p class="pull-left"><span>105 minutes</span> <br> 60 questions</p>
+                <p class="pull-right">Passing Score: 68%</p>
+              </div>
+              <div class="tag-downer">
+              <a href="##">
+                <h4>Salesforce.com Certified Force.com Developer I</h4>
+                <p>The Salesforce Certified Platform Developer I credential is intended for individuals who have knowledge, skills, and experience building custom applications on the Force.com platform. </p>
+                <p class="pull-right">Developer I</p>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" title="exam-dev2">
+            <div class="filter-tag-main filter-tag-dev2">
+              <div class="tag-upper">
+                <p class="pull-left"><span>105 minutes</span> <br> 60 questions</p>
+                <p class="pull-right">Passing Score: 68%</p>
+              </div>
+              <div class="tag-downer">
+                <h4>Force.com Developer II</h4>
+                <p>The Salesforce Certified Platform Developer I credential is intended for individuals who have knowledge, skills, and experience building custom applications on the Force.com platform. </p>
+                <p class="pull-right">Developer II</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" title="exam-dev1">
+            <div class="filter-tag-main filter-tag-admin">
+              <div class="tag-upper">
+                <p class="pull-left"><span>105 minutes</span> <br> 60 questions</p>
+                <p class="pull-right">Passing Score: 68%</p>
+              </div>
+              <div class="tag-downer">
+                <h4>Salesforce.com Certified Force.com Admin</h4>
+                <p>The Salesforce Certified </p>
+                <p class="pull-right">Developer I</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" title="exam-dev1">
+            <div class="filter-tag-main filter-tag-adv_admin">
+              <div class="tag-upper">
+                <p class="pull-left"><span>105 minutes</span> <br> 60 questions</p>
+                <p class="pull-right">Passing Score: 68%</p>
+              </div>
+              <div class="tag-downer">
+                <h4>Salesforce.com Certified Force.com Advanced Administrator</h4>
+                <p>The Salesforce individuals who have knowledge, skills, and experience building custom applications on the Force.com platform. </p>
+                <p class="pull-right">Developer I</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" title="exam-dev2">
+            <div class="filter-tag-main filter-tag-builder">
+              <div class="tag-upper">
+                <p class="pull-left"><span>105 minutes</span> <br> 60 questions</p>
+                <p class="pull-right">Passing Score: 68%</p>
+              </div>
+              <div class="tag-downer">
+                <h4>Salesforce.com Certified Force.com App Builder</h4>
+                <p>The Salesforce Certified Platform Developer I credential is intended for individuals who have knowledge, skills, and experience building custom applications on the Force.com platform. </p>
+                <p class="pull-right">Developer I</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" title="">
+            <div class="filter-tag-main filter-tag-scc">
+              <div class="tag-upper">
+                <p class="pull-left"><span>105 minutes</span> <br> 60 questions</p>
+                <p class="pull-right">Passing Score: 68%</p>
+              </div>
+              <div class="tag-downer">
+                <h4>Salesforce.com Certified Force.com Service Cloud Consultan</h4>
+                <p>The Salesforce Certified Platform Developer I credential is intended for individuals who have knowledge, skills, and experience building custom applications on the Force.com platform. </p>
+                <p class="pull-right">Developer I</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -112,6 +191,7 @@
     <script type="text/javascript">
       $(function() {
         $('.filter-tag').click(function () {
+
           var tag = $(this).attr('class');
 
           if(tag.indexOf('filter-tag-active') > 0){
@@ -119,6 +199,8 @@
           }else{
             $(this).addClass('filter-tag-active');
           }
+
+          
           
         });
 
