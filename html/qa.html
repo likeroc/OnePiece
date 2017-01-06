@@ -131,16 +131,19 @@
                   </div>
 
                   <div class="writeAnswer ">
+
                     <input class="form-control input-sm writeAction" type="text" name="" value="Write an answer or comment..." >
                     <br>
                     <div class="writeText">
+                      <input class="form-control input-sm" type="text" name="" placeholder="壮士请留名     &nbsp; &nbsp;&nbsp; 如：王二" >
+                      <br/>
                       <textarea id="editor" placeholder="Write an answer or comment..." autofocus></textarea>
                       <bottom class="btn btn-answer btn-default pull-right">Answer</bottom>
+
+                      <bottom class="btn btn-cancel btn-warning pull-left">Cancel</bottom>
                     </div>
                   </div>
                   
-
-
                 </div>
 
               </div>
@@ -245,10 +248,13 @@
         })
 
         $('.btn-answer').click(function () {
-          alert(editor.sync() );
           $('.writeAction').show();
           $('.writeText').hide();
-          editor.Destroy();
+        });
+
+        $('.btn-cancel').click(function () {
+          $('.writeAction').show();
+          $('.writeText').hide();
         });
 
         // /simditor编辑器
