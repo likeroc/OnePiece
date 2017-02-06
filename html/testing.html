@@ -74,7 +74,7 @@
               <li class="active"><a href="#">Dev Advanced</a></li>
               <li><a href="#">Exam Dev I</a></li>
               <li><a href="#">Exam Dev II</a></li>
-              <li><a href="#">Quiz</span></a></li>
+              <li><a href="#">Quiz</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -98,7 +98,7 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                    <div class="exam-main">
+                    <div class="exam-main exam-on-0">
                         <p>Which three use case requires a partial copy or full sandbox?</p>
                         <small><i>Choose three answers</i></small>
                         <div class="checkbox">
@@ -130,6 +130,10 @@
                             <input type="checkbox" value="" >
                             E. Integration Testing
                           </label>
+                        </div>
+
+                        <div class="marked text-right input-sm">
+                          Mark <input type="checkbox" value="" onchange="isMark()">
                         </div>
                     </div>
                 </div>
@@ -269,15 +273,25 @@
 
     <!-- Initialize Swiper -->
     <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        loop: true
-    });
+    $(function () {
+      var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          slidesPerView: 1,
+          paginationClickable: true,
+          spaceBetween: 30,
+          loop: true
+      });
+
+      function isMark() {
+        alert(123);
+      }
+
+
+
+    })
+    
     </script>
 </body>
 </html>

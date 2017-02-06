@@ -129,6 +129,7 @@ a .glyphicon{color: #2a6496; }
     -webkit-align-items: center;
     align-items: center;
 }
+.marked{}
 
 /*----------------my style----------------*/
 .swiper-pagination-bullet{
