@@ -46,6 +46,10 @@
         .swiper-container-horizontal>.swiper-pagination{height: 15%;}
         .swiper-wrapper{height: 85%; top: 15%; }
     }
+    .mark {
+        padding: .2em;
+        background-color: red;
+    }
     </style>
 </head>
 <body>
@@ -103,37 +107,37 @@
                         <small><i>Choose three answers</i></small>
                         <div class="checkbox">
                           <label>
-                            <input type="checkbox" value="">
+                            <input type="checkbox" value="" />
                             A. Scalability Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" >
+                            <input type="checkbox" value="" />
                             B. Development Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" >
+                            <input type="checkbox" value="" />
                             C. Quality Assurance Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" >
+                            <input type="checkbox" value="" />
                             D. Batch Data Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" >
+                            <input type="checkbox" value="" />
                             E. Integration Testing
                           </label>
                         </div>
 
                         <div class="marked text-right input-sm">
-                          Mark <input type="checkbox" value="" onchange="isMark()">
+                          Mark <input type="checkbox" id="1" value="100" onchange="ismark(this.id);">
                         </div>
                     </div>
                 </div>
@@ -143,98 +147,43 @@
                         <small>Choose one answer</small>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
                             A. Apex
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
                             B. Visualforce
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
                             C. HTML
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
                             D. JavaScript
                           </label>
                         </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="exam-main">
-                        <p>A developer creates a method in an Apex class and needs to ensure that errors are handled properly. Which three would the developer use?</p>
-                        <small><i>Choose three answers</i></small>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            A. ApexPages.addErrorMessage()
-                          </label>
-                        </div>
-                        <div class="checkbox ">
-                          <label>
-                            <input type="checkbox" value="" >
-                            B. A custom exception
-                          </label>
-                        </div>
-                        <div class="checkbox ">
-                          <label>
-                            <input type="checkbox" value="" >
-                            C. .addError()
-                          </label>
-                        </div>
-                        <div class="checkbox ">
-                          <label>
-                            <input type="checkbox" value="" >
-                            D. Database.handleException()
-                          </label>
-                        </div>
-                        <div class="checkbox ">
-                          <label>
-                            <input type="checkbox" value="" >
-                            E. A try/catch construct
-                          </label>
+                        <div class="marked text-right input-sm">
+                          Mark <input type="checkbox" id="2" value="100" onchange="ismark(this.id);">
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
                 <div class="swiper-slide">
-                    <div class="exam-main">
-                        <p>What is the correct way to describe how Model-View-Controller (MVC) architecture is implemented on the Salesforce platform?</p>
-                        <small>Choose one answer</small>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            A. Model: Standard and Custom Objects; View: Visualforce Pages; Controller: s-Controls
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            B. Model: Schema Builder; View: List Views; Controller: Setup Console
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            C. Model: Standard and Custom Objects; View: Visualforce Pages; Controller: Apex Code
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            D. Model: Apex Code; View: List Views; Controller: Setup Console
-                          </label>
-                        </div>
+                    <div class="exam-main exam-on-0" style="text-align: center; ">
+                        
+                          <button type="button" class="btn btn-primary btn-lg" style="margin-top: 35%;">Submit</button>
+                      
                     </div>
                 </div>
+                <!-- ---------------------------------------------------- -->
 
 
             </div>
@@ -269,10 +218,24 @@
     <script src="resources/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="resources/bootstrap330/js/bootstrap.min.js"></script>
-    <script src="resources/js/bts.min.js"></script>
+    
 
     <!-- Initialize Swiper -->
     <script>
+    function ismark(v) {
+      $(this).attr('id');
+      
+
+      if($('#'+v).is(':checked')){
+        console.log(v)
+        $('.swiper-pagination-bullet:nth-child('+v+')').addClass('mark');
+      }else{
+        $('.swiper-pagination-bullet:nth-child('+v+')').removeClass('mark');
+      }
+      
+      
+    }
+
     $(function () {
       var swiper = new Swiper('.swiper-container', {
           pagination: '.swiper-pagination',
@@ -283,10 +246,6 @@
           spaceBetween: 30,
           loop: true
       });
-
-      function isMark() {
-        alert(123);
-      }
 
 
 
