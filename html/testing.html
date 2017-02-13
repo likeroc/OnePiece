@@ -137,7 +137,7 @@
                         </div>
 
                         <div class="marked text-right input-sm">
-                          Mark <input type="checkbox" id="1" value="100" onchange="ismark(this.id);">
+                          Mark <input type="checkbox" id="1" value="100" onchange="ismark(this);">
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                           </label>
                         </div>
                         <div class="marked text-right input-sm">
-                          Mark <input type="checkbox" id="2" value="100" onchange="ismark(this.id);">
+                          Mark <input type="checkbox" id="2" value="100" onchange="ismark(this);">
                         </div>
                     </div>
                 </div>
@@ -223,14 +223,14 @@
     <!-- Initialize Swiper -->
     <script>
     function ismark(v) {
-      $(this).attr('id');
+      var si = parseInt($(v).parent().parent().parent().attr('data-swiper-slide-index'))+1;
+      alert(si)
       
-
-      if($('#'+v).is(':checked')){
+      if($(v).is(':checked')){
         console.log(v)
-        $('.swiper-pagination-bullet:nth-child('+v+')').addClass('mark');
+        $('.swiper-pagination-bullet:nth-child('+si+')').addClass('mark');
       }else{
-        $('.swiper-pagination-bullet:nth-child('+v+')').removeClass('mark');
+        $('.swiper-pagination-bullet:nth-child('+si+')').removeClass('mark');
       }
       
       
