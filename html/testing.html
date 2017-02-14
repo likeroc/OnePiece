@@ -107,31 +107,31 @@
                         <small><i>Choose three answers</i></small>
                         <div class="checkbox">
                           <label>
-                            <input type="checkbox" value="" />
+                            <input type="checkbox" name="Cards-0005" value="A" />
                             A. Scalability Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" />
+                            <input type="checkbox" name="Cards-0005" value="B" />
                             B. Development Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" />
+                            <input type="checkbox" name="Cards-0005" value="C" />
                             C. Quality Assurance Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" />
+                            <input type="checkbox" name="Cards-0005" value="D" />
                             D. Batch Data Testing
                           </label>
                         </div>
                         <div class="checkbox ">
                           <label>
-                            <input type="checkbox" value="" />
+                            <input type="checkbox" name="Cards-0005" value="E" />
                             E. Integration Testing
                           </label>
                         </div>
@@ -147,25 +147,25 @@
                         <small>Choose one answer</small>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                            <input type="checkbox" name="Cards-0006" value="A" />
                             A. Apex
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                            <input type="checkbox" name="Cards-0006" value="B" />
                             B. Visualforce
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                            <input type="checkbox" name="Cards-0006" value="C" />
                             C. HTML
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                            <input type="checkbox" name="Cards-0006" value="D" />
                             D. JavaScript
                           </label>
                         </div>
@@ -179,7 +179,7 @@
                 <div class="swiper-slide">
                     <div class="exam-main exam-on-0" style="text-align: center; ">
                         
-                          <button type="button" class="btn btn-primary btn-lg" style="margin-top: 35%;">Submit</button>
+                          <button onclick="submitJson()" type="button" class="btn btn-primary btn-lg" style="margin-top: 35%;">Submit</button>
                       
                     </div>
                 </div>
@@ -222,18 +222,57 @@
 
     <!-- Initialize Swiper -->
     <script>
+    function submitJson() {
+      
+      //获取所有选择的name
+      var ds = new Array();
+      $('input:checked').each(function () {
+        ds.push($(this).attr('name'));
+      })
+      
+      //上面获取的name，去重
+      var names = new Array();
+      for(var i=0; i<ds.length; i++){
+        if(!contains(names,ds[i])){
+          names.push(ds[i])
+        }
+      }
+
+      //判断obj在数组arr里是否存在
+      function contains(arr, obj) {  
+          var i = arr.length;  
+          while (i--) {  
+              if (arr[i] === obj) {  
+                  return true;  
+              }  
+          }  
+          return false;  
+      } 
+
+      //生成Json格式字符串
+      var checkIds = '';
+      for(var i = 0;i<names.length; i++){
+        checkIds += '"'+names[i]+'":[';
+
+        $('input[name^="'+names[i]+'"]:checked').each(function () {
+          checkIds += '"'+$(this).val()+'",';
+        });
+        checkIds = checkIds.substring(0,checkIds.length-1);
+        checkIds += '],' ;
+      }
+      checkIds = '{'+checkIds.substring(0,checkIds.length-1)+'}';
+      console.log(checkIds);//{"Cards-0005":["A","B","C"],"Cards-0006":["A","B"]}
+      
+    }
+
     function ismark(v) {
       var si = parseInt($(v).parent().parent().parent().attr('data-swiper-slide-index'))+1;
-      alert(si)
       
       if($(v).is(':checked')){
-        console.log(v)
         $('.swiper-pagination-bullet:nth-child('+si+')').addClass('mark');
       }else{
         $('.swiper-pagination-bullet:nth-child('+si+')').removeClass('mark');
       }
-      
-      
     }
 
     $(function () {
